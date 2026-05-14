@@ -112,3 +112,17 @@ map.h:22:37: note: expected ‘void *’ but argument is of type ‘const char *
       |                               ~~~~~~^~~
 cc1: all warnings being treated as errors
 f8a8d55
+Thu May 14 08:33:55 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:38:41: error: passing argument 2 of ‘is_equal_string’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   38 |     if(is_equal_string(g->adjacencyMap, label) != 0) return;
+      |                                         ^~~~~
+graph.c:21:39: note: expected ‘void *’ but argument is of type ‘const char *’
+   21 | int is_equal_string(void *key1, void *key2) {
+      |                                 ~~~~~~^~~~
+cc1: all warnings being treated as errors
+e950677
