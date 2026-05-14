@@ -82,3 +82,18 @@ Thu May 14 08:13:28 PM UTC 2026:
  1 file changed, 1 insertion(+)
  tests:  0|0
 edec26c
+Thu May 14 08:26:37 PM UTC 2026: 
+ graph.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addNode’:
+graph.c:38:36: error: passing argument 2 of ‘map_search’ discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   38 |     if(map_search(g->adjacencyMap, label) == NULL) return;
+      |                                    ^~~~~
+In file included from graph.c:8:
+map.h:22:37: note: expected ‘void *’ but argument is of type ‘const char *’
+   22 | MapPair *map_search(Map *map, void *key);
+      |                               ~~~~~~^~~
+cc1: all warnings being treated as errors
+ecca0cf

@@ -35,6 +35,7 @@ Graph* createGraph() {
 }
 
 void addNode(Graph* g, const char* label) {
+    if(map_search(g->adjacencyMap, label) == NULL) return;
     if (!g || !label) return;
 
 }
