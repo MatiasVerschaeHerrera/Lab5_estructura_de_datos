@@ -57,3 +57,13 @@ Thu May 14 08:04:17 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 e68546e
+Thu May 14 08:10:08 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:32:24: error: invalid use of incomplete typedef ‘Map’
+   32 |     grafo->adjacencyMap->List->current = NULL;
+      |                        ^~
+3500507
