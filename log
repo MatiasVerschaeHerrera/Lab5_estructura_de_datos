@@ -26,3 +26,17 @@ graph.c:33:17: error: expected ‘;’ before ‘}’ token
    34 | }
       | ~                
 800264f
+Thu May 14 08:02:36 PM UTC 2026: 
+ graph.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘createGraph’:
+graph.c:31:30: error: implicit declaration of function ‘EXIT’ [-Wimplicit-function-declaration]
+   31 |     if(grafo == NULL) return EXIT(exit_failure);
+      |                              ^~~~
+graph.c:31:35: error: ‘exit_failure’ undeclared (first use in this function)
+   31 |     if(grafo == NULL) return EXIT(exit_failure);
+      |                                   ^~~~~~~~~~~~
+graph.c:31:35: note: each undeclared identifier is reported only once for each function it appears in
+3447906
