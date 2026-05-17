@@ -341,3 +341,20 @@ list.h:14:23: note: expected ‘List *’ but argument is of type ‘MapPair *�
    14 | void *list_next(List *L);
       |                 ~~~~~~^
 c5e4c72
+Sun May 17 04:49:55 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getAdjacentLabels’:
+graph.c:98:25: error: passing argument 1 of ‘list_next’ from incompatible pointer type [-Wincompatible-pointer-types]
+   98 |         aux = list_next(pair);
+      |                         ^~~~
+      |                         |
+      |                         MapPair *
+In file included from graph.h:4,
+                 from graph.c:6:
+list.h:14:23: note: expected ‘List *’ but argument is of type ‘MapPair *’
+   14 | void *list_next(List *L);
+      |                 ~~~~~~^
+0f7bf04

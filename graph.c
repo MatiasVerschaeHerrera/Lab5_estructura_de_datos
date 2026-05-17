@@ -87,7 +87,7 @@ List* getAdjacentLabels(Graph* g, const char* label) {
     if(pair == NULL) return NULL;
 
     List* nuevaLista = list_create();
-    Edge* aux = list_first(pair);
+    Edge* aux = list_first(pair->value);
     while(aux != NULL){
         if(nuevaLista == NULL){
             list_pushFront(nuevaLista, aux->target);
