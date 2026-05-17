@@ -95,7 +95,7 @@ List* getAdjacentLabels(Graph* g, const char* label) {
         else{
             list_pushCurrent(nuevaLista, aux->target);
         }
-        aux = list_next(pair);
+        aux = list_next(aux);
     }
     return nuevaLista;
 }
