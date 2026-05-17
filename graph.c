@@ -72,7 +72,7 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
     
     List* listaLabel1 = pair1->value;
     Edge* target = list_first(listaLabel1);
-    while(listaLabel1 != NULL){
+    while(target != NULL){
         if(strcmp(target->target, label2) == 0) return target->weight;
         target = list_next(listaLabel1);
     }
@@ -89,7 +89,7 @@ List* getAdjacentLabels(Graph* g, const char* label) {
     List* nuevaLista = list_create();
     List* listaAux = pair->value;
     Edge* aux = list_first(listaAux);
-    while(listaAux != NULL){
+    while(aux != NULL){
         if(nuevaLista == NULL){
             list_pushFront(nuevaLista, aux->target);
         }
