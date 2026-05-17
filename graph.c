@@ -35,9 +35,12 @@ Graph* createGraph() {
 }
 
 void addNode(Graph* g, const char* label) {
-    if(is_equal_string(g->adjacencyMap, label) != 0) return;
     if (!g || !label) return;
+    if(map_search(g->adjacencyMap, label) != NULL) return;
 
+    char* copyLabel = strdup(label);
+    List* nuevaLista = list_create();
+    map_insert(g->adjacencyMap, copyLabel, nuevaLista);
 }
 
 void addEdge(Graph* g, const char* src, const char* dest, int weight) {
