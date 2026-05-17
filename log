@@ -181,3 +181,20 @@ graph.c:54:20: error: array subscript is not an integer
       |                    ^
 cc1: all warnings being treated as errors
 f09d4b9
+Sun May 17 04:19:27 PM UTC 2026: 
+ graph.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:48:5: error: unknown type name ‘mapPair’; did you mean ‘MapPair’?
+   48 |     mapPair* pair = map_search(g->adjacencyMap, (void*)src);
+      |     ^~~~~~~
+      |     MapPair
+graph.c:48:21: error: initialization of ‘int *’ from incompatible pointer type ‘MapPair *’ [-Wincompatible-pointer-types]
+   48 |     mapPair* pair = map_search(g->adjacencyMap, (void*)src);
+      |                     ^~~~~~~~~~
+graph.c:56:30: error: request for member ‘value’ in something not a structure or union
+   56 |     List* list = (List*) pair->value;
+      |                              ^~
+b8c6384
