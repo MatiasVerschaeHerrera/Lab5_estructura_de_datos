@@ -248,3 +248,24 @@ graph.c:76:30: error: ‘cont’ undeclared (first use in this function)
    76 |         target = listaLabel1[cont];
       |                              ^~~~
 35990d4
+Sun May 17 04:38:14 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:71:30: error: returning ‘void *’ from a function with return type ‘int’ makes integer from pointer without a cast [-Wint-conversion]
+   71 |     if(pair1 == NULL) return NULL;
+      |                              ^~~~
+graph.c:74:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘==’ token
+   74 |     int cont == 0;
+      |              ^~
+graph.c:74:14: error: expected expression before ‘==’ token
+graph.c:76:9: error: ‘target’ undeclared (first use in this function)
+   76 |         target = listaLabel1[cont];
+      |         ^~~~~~
+graph.c:76:9: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:76:30: error: ‘cont’ undeclared (first use in this function)
+   76 |         target = listaLabel1[cont];
+      |                              ^~~~
+59c6075
