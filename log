@@ -285,3 +285,13 @@ graph.c:77:25: error: ‘Edge’ has no member named ‘value’
    77 |         if(strcmp(target->value, label2) == 0) return target->weight;
       |                         ^~
 31fdacb
+Sun May 17 04:41:08 PM UTC 2026: 
+ graph.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:76:25: error: ‘Edge’ has no member named ‘value’
+   76 |         if(strcmp(target->value, label2) == 0) return target->weight;
+      |                         ^~
+8bfbbe2

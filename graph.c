@@ -71,11 +71,10 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
     if(pair1 == NULL) return -1;
     
     List* listaLabel1 = pair1->value;
-    int cont = 0;
+    Edge* target = list_first(listaLabel1);
     while(listaLabel1 != NULL){
-        Edge* target = listaLabel1[cont];
         if(strcmp(target->value, label2) == 0) return target->weight;
-        cont++;
+        target = list_next(listaLabel1);
     }
     
     // Si no existe el origen o terminamos de iterar sin encontrar el destino
