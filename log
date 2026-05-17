@@ -269,3 +269,19 @@ graph.c:76:30: error: ‘cont’ undeclared (first use in this function)
    76 |         target = listaLabel1[cont];
       |                              ^~~~
 59c6075
+Sun May 17 04:38:59 PM UTC 2026: 
+ graph.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:76:35: error: invalid use of undefined type ‘struct List’
+   76 |         Edge* target = listaLabel1[cont];
+      |                                   ^
+graph.c:76:24: error: invalid use of incomplete typedef ‘List’
+   76 |         Edge* target = listaLabel1[cont];
+      |                        ^~~~~~~~~~~
+graph.c:77:25: error: ‘Edge’ has no member named ‘value’
+   77 |         if(strcmp(target->value, label2) == 0) return target->weight;
+      |                         ^~
+31fdacb
