@@ -76,7 +76,6 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
         if(strcmp(target->target, label2) == 0) return target->weight;
         target = list_next(listaLabel1);
     }
-    
     // Si no existe el origen o terminamos de iterar sin encontrar el destino
     return -1; 
 }
@@ -84,9 +83,21 @@ int getWeight(Graph* g, const char* label1, const char* label2) {
 // Retorna una nueva List* que contiene elementos de tipo char* (las etiquetas)
 List* getAdjacentLabels(Graph* g, const char* label) {
     if (!g || !label) return NULL;
+    MapPair* pair = map_search(g->adjacencyMap, (void*)label);
+    if(pair == NULL) return NULL;
 
-
-    return NULL; 
+    List* nuevaLista = list_create();
+    Edge* aux = list_first(pair);
+    while(aux != NULL){
+        if(nuevaLista == NULL){
+            list_pushFront(nuevaLista, aux->target);
+        }
+        else{
+            list_pushCurrent(nuevaLista, aux->target);
+        }
+        aux = list_next(pair);
+    }
+    return nuevaLista;
 }
 
 void destroyGraph(Graph* g) {
