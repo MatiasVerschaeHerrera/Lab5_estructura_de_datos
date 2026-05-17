@@ -227,3 +227,24 @@ Sun May 17 04:25:11 PM UTC 2026:
  tests:  8|2
 ========================================
 b8e0c17
+Sun May 17 04:38:01 PM UTC 2026: 
+ graph.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:71:5: error: expected ‘,’ or ‘;’ before ‘if’
+   71 |     if(pair1 == NULL) return NULL;
+      |     ^~
+graph.c:74:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘==’ token
+   74 |     int cont == 0;
+      |              ^~
+graph.c:74:14: error: expected expression before ‘==’ token
+graph.c:76:9: error: ‘target’ undeclared (first use in this function)
+   76 |         target = listaLabel1[cont];
+      |         ^~~~~~
+graph.c:76:9: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:76:30: error: ‘cont’ undeclared (first use in this function)
+   76 |         target = listaLabel1[cont];
+      |                              ^~~~
+35990d4
