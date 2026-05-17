@@ -167,3 +167,17 @@ graph.c:54:20: error: array subscript is not an integer
       |                    ^
 cc1: all warnings being treated as errors
 6c03f95
+Sun May 17 04:14:50 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘addEdge’:
+graph.c:52:23: error: assignment discards ‘const’ qualifier from pointer target type [-Werror=discarded-qualifiers]
+   52 |     nuevoEdge->target = dest;
+      |                       ^
+graph.c:54:20: error: array subscript is not an integer
+   54 |     g->adjacencyMap[src] = nuevoEdge;
+      |                    ^
+cc1: all warnings being treated as errors
+f09d4b9
