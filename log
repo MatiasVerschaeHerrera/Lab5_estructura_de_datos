@@ -203,3 +203,21 @@ Sun May 17 04:20:03 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 f21d960
+Sun May 17 04:24:57 PM UTC 2026: 
+ graph.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getEdges’:
+graph.c:62:14: error: expected identifier or ‘(’ before ‘=’ token
+   62 |     MapPair* = pair = map_search(g->adjacencyMap, (void*) label);
+      |              ^
+graph.c:63:8: error: ‘pair’ undeclared (first use in this function)
+   63 |     if(pair == NULL) return NULL;
+      |        ^~~~
+graph.c:63:8: note: each undeclared identifier is reported only once for each function it appears in
+graph.c:66:1: error: control reaches end of non-void function [-Werror=return-type]
+   66 | }
+      | ^
+cc1: all warnings being treated as errors
+8d5e776
