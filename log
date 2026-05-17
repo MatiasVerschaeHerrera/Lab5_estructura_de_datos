@@ -295,3 +295,19 @@ graph.c:76:25: error: ‘Edge’ has no member named ‘value’
    76 |         if(strcmp(target->value, label2) == 0) return target->weight;
       |                         ^~
 8bfbbe2
+Sun May 17 04:41:54 PM UTC 2026: 
+ graph.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+graph.c: In function ‘getWeight’:
+graph.c:76:19: error: passing argument 1 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+   76 |         if(strcmp(target, label2) == 0) return target->weight;
+      |                   ^~~~~~
+      |                   |
+      |                   Edge *
+In file included from test.c:3:
+/nix/store/41pf3md9zgpda9kwh6rzn5kaddf7i0lp-glibc-2.40-66-dev/include/string.h:156:32: note: expected ‘const char *’ but argument is of type ‘Edge *’
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |                    ~~~~~~~~~~~~^~~~
+b37f5ef
